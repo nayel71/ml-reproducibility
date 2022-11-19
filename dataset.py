@@ -13,15 +13,15 @@ import time
 PATH = "/content/drive/My Drive/Colab Notebooks/EECS553ML_reproduce"
 #PATH = "/Users/sriasat/Google Drive/My Drive/Colab Notebooks/EECS553ML_reproduce"
 # NOTE: Update MODEL according to the model
-MODEL = "Resnet18"
-to_string = {MNIST: "MNIST", CIFAR10: "CIFAR10"}
+MODEL = "ResNet-18"
+to_string = {MNIST: "MNIST", CIFAR10: "CIFAR-10"}
 
 
 class Dataset:
     def __init__(self, model, data):
         """
-        model: pre-trained resnet model
-        data: CIFAR10 or MNIST
+        model: pre-trained ResNet model
+        data: CIFAR-10 or MNIST
         """
         self.model = model
         self.data = data
@@ -242,12 +242,14 @@ class Dataset:
             os.makedirs(path)
         os.chdir(path)
 
-        np.savetxt(f"berrut_acc.txt", berrut_acc, fmt="%s")
-        np.savetxt(f"center_acc.txt", center_acc, fmt="%s")
+        #np.savetxt(f"berrut_acc.txt", berrut_acc, fmt="%s")
+        #np.savetxt(f"center_acc.txt", center_acc, fmt="%s")
 
-        with open(f"setup.txt", "w") as f:
-            f.write(f"N = K + 1, S = {S}, iterations= {iterations}\n")
-            f.write(f"K = {K_list}")
+        with open(f"output.txt", "w") as f:
+            f.write(f"N = K + 1, S = {S}, iterations = {iterations}\n")
+            f.write(f"K = {K_list}\n")
+            f.write(f"Berrut Accuracy = {berrut_acc}\n")
+            f.write(f"Centralized Accuracy = {center_acc}")
 
         bar_width = 0.2
         X_axis = np.arange(len(K_list))

@@ -1,2 +1,0 @@
-N = K + 1, S = 2, iterations= 100
-K = [8]

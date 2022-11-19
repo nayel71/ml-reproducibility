@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# DS_Store
+.DS_Store
+**/.DS_Store
+
+# source code backups
+*.bak
+
+# .swp files
+*.swp
+
+# other
+.AU.o7M7Z
+.git
