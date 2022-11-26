@@ -8,7 +8,7 @@ __pycache__/
 .DS_Store
 **/.DS_Store
 
-# source code backups
+# backup files
 *.bak
 
 # .swp files
@@ -17,3 +17,4 @@ __pycache__/
 # other
 .AU.o7M7Z
 .git
+data/

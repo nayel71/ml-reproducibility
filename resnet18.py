@@ -166,7 +166,5 @@ class ResNet18(ResNet):
 class ResNet152(ResNet):
     def __init__(self, num_classes=100, size_for_cifar=True):
         super(ResNet152, self).__init__(
-                block=BasicBlock, layers=[3, 8, 36, 3],
+                block=Bottleneck, layers=[3, 8, 36, 3],
                 num_classes=num_classes, size_for_cifar=size_for_cifar)
-
-
