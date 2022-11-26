@@ -1,6 +1,7 @@
 import pytorch_lightning as pl
 import torch
-from pytorch_lightning.metrics import Accuracy
+#from pytorch_lightning.metrics import Accuracy
+from torchmetrics.functional import accuracy
 
 from cifar10_models.densenet import densenet121, densenet161, densenet169
 from cifar10_models.googlenet import googlenet
@@ -33,7 +34,7 @@ class CIFAR10Module(pl.LightningModule):
         self.hparams = hparams
 
         self.criterion = torch.nn.CrossEntropyLoss()
-        self.accuracy = Accuracy()
+        self.accuracy = accuracy()
 
         self.model = all_classifiers[self.hparams.classifier]
 
