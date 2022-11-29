@@ -14,7 +14,7 @@ __pycache__/
 # .swp files
 *.swp
 
-# large training checkpoints
+# train checkpoints
 .t7
 .pt
 
