@@ -3,10 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-NUM_CLASSES = 10
-GRAYSCALE = True
-
-
 def conv3x3(in_planes, out_planes, stride=1):
     """3x3 convolution with padding"""
     return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,
@@ -113,8 +109,7 @@ class ResNet(nn.Module):
 
 def resnet34():
     """Constructs a ResNet-34 model."""
-    model = ResNet(block=BasicBlock,
-                   layers=[3, 4, 6, 3],
-                   num_classes=NUM_CLASSES,
-                   grayscale=GRAYSCALE)
-    return model
+    return ResNet(block=BasicBlock,
+                  layers=[3, 4, 6, 3],
+                  num_classes=10,
+                  grayscale=True)
