@@ -1,4 +1,4 @@
 N = K + 1, S = 1, iterations = 300
 K = [8, 12]
-Berrut Accuracy = [0.85458333 0.85111111]
-Centralized Accuracy = [0.98791667 0.98666667]
+Berrut Accuracy = [0.85708333 0.84972222]
+Centralized Accuracy = [0.98875 0.985  ]
